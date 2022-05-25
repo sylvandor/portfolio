@@ -14,10 +14,10 @@ const Header = () =>
         <Link to={'/'} className={'icon-container'}>
           <FontAwesomeIcon icon={faHouse}/>
         </Link>
-        <a href={'https://github.com/sylvandor'} target={'_blank'} rel="noreferrer">
+        <a href={'https://github.com/sylvandor'}>
           <FontAwesomeIcon icon={faGithub}/>
         </a>
-        <a href={'https://linkedin.com/in/scottwwj'} target={'_blank'} rel="noreferrer">
+        <a href={'https://linkedin.com/in/scottwwj'}>
           <FontAwesomeIcon icon={faLinkedin}/>
         </a>
       </div>
