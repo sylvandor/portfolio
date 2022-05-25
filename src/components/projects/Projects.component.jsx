@@ -42,6 +42,7 @@ const Project = ({title, desc, image, link, tech, website}) =>
 const Projects = () => <div>
   <Header/>
   <div className={'projects'}>
+    <Project {...PROJECTS.portfolio}/>
     <Project {...PROJECTS.crwnClothing}/>
   </div>
 </div>;

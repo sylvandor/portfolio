@@ -1,4 +1,4 @@
-import pic from '../../resources/portfolio.png';
+import pic from '../../resources/profile.png';
 
 import './Home.styles.scss';
 

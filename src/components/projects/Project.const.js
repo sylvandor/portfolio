@@ -1,6 +1,17 @@
 import crwnClothing from '../../resources/crwnClothing.png'
+import portfolio from '../../resources/portfolio.png'
 
 export const PROJECTS = {
+  portfolio: {
+  title: 'Portfolio',
+    link: 'https://github.com/sylvandor/portfolio',
+    desc: "You Are Here 📍 I decided that it was about time for me to create " +
+      "my own portfolio web resume. So this is it. Currently it's still in its early stages, but every project has to " +
+      "start somewhere.",
+    tech: 'React, Netlify, Google Domain',
+    image: portfolio,
+    website: 'http://scottwwj.com'
+  },
   crwnClothing: {
     title: 'Crwn Clothing',
     link: 'https://github.com/sylvandor/crwn-clothing',
@@ -12,5 +23,6 @@ export const PROJECTS = {
     tech: 'React, Redux, Firebase Auth, Firestore, Styled Components, Redux Thunk, Redux Persist, Redux Saga, Netlify, Stripe, Typescript',
     image: crwnClothing,
     website: 'https://cerulean-macaron-d14353.netlify.app/'
-  }
+  },
+
 }
