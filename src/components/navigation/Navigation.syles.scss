@@ -1,0 +1,42 @@
+@use '../../index.scss' as index;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 56px;
+
+  background-color: index.$primary-light-color;
+
+  .icon-container {
+    padding: index.$base-spacing * 1.5;
+    margin: index.$base-spacing;
+    font-size: 32px;
+
+    cursor: pointer;
+  }
+
+  .navigation {
+    & a {
+      display: inline-block;
+      text-decoration: none;
+      color: index.$text-color;
+
+      font-size: 20px;
+      font-weight: bold;
+
+      padding: index.$base-spacing * 1.5;
+      margin: 0;
+      border-radius: 4px;
+
+      cursor: pointer;
+
+      &:hover {
+        color: index.$background-color;
+        background-color: #4B497A;
+        box-shadow: 2px 2px 4px #444;
+      }
+    }
+  }
+}

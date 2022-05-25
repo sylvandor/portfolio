@@ -1,0 +1,25 @@
+$base-spacing: 8px;
+$text-color: #4B497A;
+$primary-dark-color: #5E7691;
+$primary-light-color: #C1BEB7;
+$background-color: #E6E3D3;
+
+body {
+  margin: 0;
+  font-family: Akshar, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: $background-color;
+  color: $text-color;
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  }
+
+  box-sizing: border-box;
+}
+
+
+
