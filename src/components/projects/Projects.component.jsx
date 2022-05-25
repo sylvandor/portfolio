@@ -14,7 +14,7 @@ const Header = () =>
 
 const Title = ({link, title}) =>
   <div className={'title'}>
-    <a href={link} target={'_blank'} rel="noreferrer">
+    <a href={link}>
       <FontAwesomeIcon icon={faCode} className={'code-link'}/>
     </a>
     <span>{title}</span>
