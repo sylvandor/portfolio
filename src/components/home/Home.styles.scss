@@ -4,7 +4,17 @@
   padding: index.$base-spacing*4;
 
   .name {
+    font-family: 'Yellowtail', sans-serif;
+    font-size: 40px;
     text-align: center;
+  }
+
+  .welcome {
+    font-family: 'Yellowtail', sans-serif;
+  }
+
+  h3 {
+    margin-left: index.$base-spacing*4;
   }
 
   .image-container {
