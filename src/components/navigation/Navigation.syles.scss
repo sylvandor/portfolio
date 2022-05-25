@@ -9,37 +9,59 @@
 
   background-color: index.$primary-light-color;
 
-  .icon-container {
-    padding: index.$base-spacing * 1.5;
-    margin: index.$base-spacing;
-    font-size: 32px;
-
-    cursor: pointer;
-
-    text-decoration: none;
-    color: index.$text-color;
-  }
-
   .navigation {
+    display: flex;
+    gap: index.$base-spacing;
+    align-items: center;
+
     & a {
       display: inline-block;
       text-decoration: none;
       color: index.$text-color;
+      font-size: 32px;
+    }
 
-      font-size: 20px;
-      font-weight: bold;
+    &.left {
+      margin-left: index.$base-spacing;
+      gap: index.$base-spacing*2;
 
-      padding: index.$base-spacing * 1.5;
-      margin: 0;
-      border-radius: 4px;
+      & a {
+       padding: 0;
+      }
 
-      cursor: pointer;
+      .icon-container {
+        font-size: 32px;
+        text-decoration: none;
+        color: index.$text-color;
 
-      &:hover {
-        color: index.$background-color;
-        background-color: #4B497A;
-        box-shadow: 2px 2px 4px #444;
+        cursor: pointer;
+      }
+    }
+
+    &.right {
+      margin-right: index.$base-spacing;
+
+      & a {
+        padding: index.$base-spacing*1.5;
+
+        font-size: 20px;
+        font-weight: bold;
+
+        margin: 0;
+        border-radius: 4px;
+
+        cursor: pointer;
+
+        &:hover {
+          color: index.$background-color;
+          background-color: #4B497A;
+          box-shadow: 2px 2px 4px #444;
+        }
       }
     }
   }
+}
+
+.main-content {
+  padding: index.$base-spacing*2;
 }

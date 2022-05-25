@@ -2,8 +2,8 @@ import React from 'react';
 import {Route, Routes} from "react-router-dom";
 
 import Navigation from "./navigation/Navigation.component";
-import Resume from "./resume/resume.component";
-import Projects from "./projects/projects.component";
+import Personal from "./personal/personal.component";
+import Projects from "./projects/Projects.component";
 import Home from "./home/Home.component";
 
 const App = () =>
@@ -12,7 +12,7 @@ const App = () =>
       <Route path={'/'} element={<Navigation/>}>
         <Route index element={<Home/>}/>
         <Route path={'/projects'} element={<Projects/>}/>
-        <Route path={'/personal'} element={<Resume/>}/>
+        <Route path={'/personal'} element={<Personal/>}/>
       </Route>
     </Routes>
   </div>;
