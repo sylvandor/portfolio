@@ -3,7 +3,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faHouse, faCloudArrowDown} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
-import resume from '../../resources/testfile.txt'
+import resume from '../../resources/currentResume.pdf'
 
 import './Navigation.syles.scss'
 
@@ -24,7 +24,7 @@ const Header = () =>
       <div className={'right navigation'}>
         <Link to={'/projects'}>Projects</Link>
         <Link to={'/personal'}>Personal</Link>
-        <a href={resume} download={'scott_johnson_resume.txt'}>
+        <a href={resume} download={'scott_johnson_resume.pdf'}>
           Resume <FontAwesomeIcon icon={faCloudArrowDown}/>
         </a>
       </div>
