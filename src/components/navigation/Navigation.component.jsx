@@ -23,7 +23,7 @@ const Header = () =>
       </div>
       <div className={'right navigation'}>
         <Link to={'/projects'}>Projects</Link>
-        <Link to={'/personal'}>Personal</Link>
+        <Link to={'/bio'}>Bio</Link>
         <a href={resume} download={'scott_johnson_resume.pdf'}>
           Resume <FontAwesomeIcon icon={faCloudArrowDown}/>
         </a>
