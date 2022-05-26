@@ -1,5 +1,6 @@
 import crwnClothing from '../../resources/crwnClothing.png'
 import portfolio from '../../resources/portfolio.png'
+import gladiator from '../../resources/gladiator.png'
 
 export const PROJECTS = {
   portfolio: {
@@ -24,5 +25,15 @@ export const PROJECTS = {
     image: crwnClothing,
     website: 'https://cerulean-macaron-d14353.netlify.app/'
   },
-
+  gladiator: {
+    title: 'Gladiator',
+    link: 'https://github.com/sylvandor/Gladiator',
+    desc: "This one doesn't have a lot of work done on it just yet...It's really just a bunch of math. I started this " +
+      "because the game <a href='https://boardgamegeek.com/boardgame/1693/gladiator'>Gladiator</a> was my Father in Law's " +
+      "favorite board game way back when. So, I started this as a means to hopefully one day be able to play this game with " +
+      "him online in the future. Until then, we'll just have to stick to in person visits. This had the super interesting " +
+      "problem to try to solve of dealing a hex gaming board. Def not as straight forward as a grid.",
+    tech: 'HTML5 canvas, Math',
+    image: gladiator
+  }
 }
