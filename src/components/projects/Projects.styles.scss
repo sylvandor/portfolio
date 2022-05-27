@@ -71,8 +71,11 @@ $image-sides: 120px;
           cursor: pointer;
           box-shadow: 4px 4px 4px #999;
 
+          transition: width 1s;
           &:hover {
             border-color: index.$primary-light-color;
+            height: $image-sides + 20px;
+            width: $image-sides + 20px;
           }
         }
 
