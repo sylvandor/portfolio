@@ -44,6 +44,7 @@ const Projects = () => <div>
     <Project {...PROJECTS.portfolio}/>
     <Project {...PROJECTS.crwnClothing}/>
     <Project {...PROJECTS.gladiator}/>
+    <Project {...PROJECTS.css2022}/>
   </div>
 </div>;
 

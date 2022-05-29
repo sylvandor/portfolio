@@ -1,6 +1,7 @@
 import crwnClothing from '../../resources/crwnClothing.png'
 import portfolio from '../../resources/portfolio.png'
 import gladiator from '../../resources/gladiator.png'
+import css2022 from '../../resources/css_2022.png'
 
 export const PROJECTS = {
   portfolio: {
@@ -35,5 +36,17 @@ export const PROJECTS = {
       "problem to try to solve of dealing a hex gaming board. Def not as straight forward as a grid.",
     tech: 'HTML5 canvas, Math',
     image: gladiator
+  },
+  css2022: {
+    title: 'CSS Complete Guide - 2022',
+    link: 'https://github.com/sylvandor/CSS_CompleteGuide_2022',
+    desc: "This is a project that I'm doing while going through the Udemy course " +
+      " <a href='https://www.udemy.com/course/css-the-complete-guide-incl-flexbox-grid-sass/'>CSS - The Complete Guide 2022</a>." +
+      " My team at Block decided that we wanted to more completely learn in the ins and outs of CSS, so we started this together " +
+      "and discuss weekly. It's been quite interesting learning more specifics on how and why CSS works the way that it does." +
+      " I can safely admit that I've already learned more than expected in the first six sections.",
+    tech: 'CSS3',
+    image: css2022,
+    website: 'https://6292ba6f307cc55a9e2036f2--bucolic-figolla-3048a5.netlify.app'
   }
 }
