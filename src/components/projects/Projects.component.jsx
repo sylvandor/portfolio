@@ -20,25 +20,35 @@ const Title = ({link, title}) =>
     <span>{title}</span>
   </div>
 
-const Content = ({desc, tech, website, image, title}) =>
+const Image = ({website, title, image}) =>
+  <div className={'image-container'}>
+    <a className={`image-link ${website && 'link'}`} {...(website && {href: website})}>
+      <img src={image} alt={`${title}`}/>
+    </a>
+  </div>
+
+const Description = ({desc}) =>
+  <div className={'description'} dangerouslySetInnerHTML={{__html: desc}}/>
+
+const Technology = ({tech}) =>
+  <div className={'tech'}>
+    <h4>Technologies</h4>
+    <p>{tech}</p>
+  </div>
+
+const Content = ({desc, tech, title, link}) =>
   <div className={'content'}>
+    <Title link={link} title={title}/>
     <div className={'text'}>
-      <h4>Description</h4>
-      <div dangerouslySetInnerHTML={{__html: desc}}/>
-      <h4>Technologies</h4>
-      <p>{tech}</p>
-    </div>
-    <div className={'image-container'}>
-      <a className={`image-link ${website && 'link'}`} {...(website && {href: website})}>
-        <img src={image} alt={`${title}`}/>
-      </a>
+     <Description desc={desc}/>
+      <Technology tech={tech}/>
     </div>
   </div>
 
-const Project = ({title, desc, image, link, tech, website}) =>
+const Project = ({title, desc, image, tech, website}) =>
   <div className={'project'}>
-    <Title link={link} title={title}/>
     <Content title={title} desc={desc} image={image} tech={tech} website={website}/>
+    <Image website={website} image={image} title={title}/>
   </div>
 
 const Projects = () => <div>
