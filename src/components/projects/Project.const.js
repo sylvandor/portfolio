@@ -35,7 +35,8 @@ export const PROJECTS = {
       "him online in the future. Until then, we'll just have to stick to in person visits. This had the super interesting " +
       "problem to try to solve of dealing a hex gaming board. Def not as straight forward as a grid.",
     tech: 'HTML5 canvas, Math',
-    image: gladiator
+    image: gladiator,
+    website: 'https://6292c4aaf71d0a5df5eb4416--timely-fox-5807fe.netlify.app'
   },
   css2022: {
     title: 'CSS Complete Guide - 2022',
