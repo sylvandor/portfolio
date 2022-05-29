@@ -8,7 +8,8 @@ import './Projects.styles.scss'
 const Header = () =>
   <div className={'projects-header'}>
     <h1>Personal Projects</h1>
-    <h3>Here are a few things I've worked on in my own time. My personal work is most comprised of tutorials through online courses.</h3>
+    <h3>Here are a few things I've worked on in my own time. My personal work is most comprised of tutorials through
+      online courses.</h3>
   </div>
 
 const Title = ({link, title}) =>
@@ -27,9 +28,11 @@ const Content = ({desc, tech, website, image, title}) =>
       <h4>Technologies</h4>
       <p>{tech}</p>
     </div>
-    <a className={`image-container ${website && 'link'}`} {...(website && {href: website})}>
-      <img src={image} alt={`${title}`}/>
-    </a>
+    <div className={'image-container'}>
+      <a className={`image-link ${website && 'link'}`} {...(website && {href: website})}>
+        <img src={image} alt={`${title}`}/>
+      </a>
+    </div>
   </div>
 
 const Project = ({title, desc, image, link, tech, website}) =>

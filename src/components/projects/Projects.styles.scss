@@ -38,7 +38,8 @@ $image-sides: 120px;
         cursor: pointer;
         box-shadow: 4px 4px 4px #999;
 
-        &:hover {
+        &:hover,
+        &:active {
           color: index.$text-color;
           background-color: index.$primary-light-color;
         }
@@ -53,7 +54,7 @@ $image-sides: 120px;
       gap: index.$base-spacing*2;
 
       .text {
-        width: calc(100% - $image-sides);
+        width: calc(100% - #{$image-sides});
 
         a {
           color: index.$primary-dark-color;
@@ -61,28 +62,43 @@ $image-sides: 120px;
       }
 
       .image-container {
-        height: $image-sides;
-        width: $image-sides;
-        border: 2px solid index.$primary-dark-color;
-        border-radius: 4px;
-        flex-grow: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
 
-        &.link {
-          cursor: pointer;
-          box-shadow: 4px 4px 4px #999;
+        height: $image-sides + 20px;
+        width: $image-sides + 20px;
 
-          transition: width 1s;
-          &:hover {
-            border-color: index.$primary-light-color;
-            height: $image-sides + 20px;
-            width: $image-sides + 20px;
+        .image-link {
+          position: absolute;
+
+          border: 2px solid index.$primary-dark-color;
+          border-radius: 4px;
+          flex-grow: 500;
+
+          height: $image-sides;
+          width: $image-sides;
+
+          &.link {
+            cursor: pointer;
+            box-shadow: 4px 4px 4px #999;
+
+            transition: width 2s, height 2s;
+
+            &:hover,
+            &:active {
+              border-color: index.$primary-light-color;
+              height: $image-sides + 20px;
+              width: $image-sides + 20px;
+            }
           }
-        }
 
-        & img {
-          object-fit: cover;
-          height: 100%;
-          width: 100%;
+          & img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+          }
         }
       }
     }
