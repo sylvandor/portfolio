@@ -1,11 +1,18 @@
 @use '../../index.scss' as index;
 
+$header-height: 56px;
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  height: 56px;
+  height: $header-height;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
   background-color: index.$primary-light-color;
 
@@ -64,4 +71,11 @@
 
 .main-content {
   padding: index.$base-spacing*2;
+  position: fixed;
+  top: $header-height;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  overflow-y: scroll;
 }
