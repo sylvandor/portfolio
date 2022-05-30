@@ -13,7 +13,11 @@ const Home = () =>
     </h1>
     <h3>
       I'm a software engineer. I decided to make this page as a portfolio for my professional work and
-      talk about myself a bit. Feel free to navigate with the links up top.
+      talk about myself a bit. While I've spent most of my career working on overly complex Java projects,
+      I've really found a passion for building UIs. Of late, that's manifested in React webpages.
+    </h3>
+    <h3>
+      Anyway, welcome to my WIP portfolio site. If you want to connect with me, please do so via LinkedIn.
     </h3>
   </div>;
 
