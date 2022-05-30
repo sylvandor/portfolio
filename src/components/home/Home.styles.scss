@@ -9,26 +9,33 @@
     text-align: center;
   }
 
+  .image-container {
+    height: 450px;
+    width: 450px;
+
+    margin: 0 auto;
+
+    .outer {
+      width: 80%;
+
+      &.hex {
+        .hex-content-container {
+          background-color: index.$primary-dark-color;
+        }
+      }
+
+      .hex {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
   .welcome {
     font-family: 'Yellowtail', sans-serif;
   }
 
   h3 {
     margin-left: index.$base-spacing*4;
-  }
-
-  .image-container {
-    height: 300px;
-    width: 300px;
-    margin: 0 auto;
-
-    & img {
-      object-fit: cover;
-      height: 100%;
-      width: 100%;
-
-      border-radius: 250px;
-      border: 4px solid index.$primary-dark-color
-    }
   }
 }

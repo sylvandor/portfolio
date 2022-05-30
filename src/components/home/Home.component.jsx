@@ -1,12 +1,15 @@
-import pic from '../../resources/profile.png';
+import {Hex} from "../misc/Hex.component";
 
 import './Home.styles.scss';
+import profile from '../../resources/profile.png'
 
 const Home = () =>
   <div className={'home'}>
     <h1 className={'name'}>Hi, I'm Scott</h1>
     <div className={'image-container'}>
-      <img src={pic} alt={'profile pic'}/>
+      <Hex className={'outer'}>
+        <Hex image={profile}/>
+      </Hex>
     </div>
     <h1 className={'welcome'}>
       Welcome,
