@@ -70,7 +70,7 @@ $header-height: 56px;
 }
 
 .main-content {
-  padding: index.$base-spacing*2;
+  padding: index.$base-spacing*4;
   position: fixed;
   top: $header-height;
   bottom: 0;
@@ -78,4 +78,8 @@ $header-height: 56px;
   right: 0;
 
   overflow-y: scroll;
+
+  @media(max-width: 600px) {
+    padding: index.$base-spacing*2;
+  }
 }
