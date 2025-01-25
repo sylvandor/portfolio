@@ -1,6 +1,6 @@
 const INITIAL_STATE = {}
 
-const rootReducer = (state = INITIAL_STATE, action) => {
+const rootReducer = (state = INITIAL_STATE) => {
   return state;
 }
 

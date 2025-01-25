@@ -12,7 +12,13 @@ const Header = () =>
       online courses.</h3>
   </div>
 
-const Title = ({link, title}) =>
+
+interface TitleProps {
+  link?: string;
+  title: string;
+}
+
+const Title = ({link, title}: TitleProps) =>
   <div className={'title'}>
     <a href={link}>
       <FontAwesomeIcon icon={faCode} className={'code-link'}/>
@@ -20,23 +26,47 @@ const Title = ({link, title}) =>
     <span>{title}</span>
   </div>
 
-const Image = ({website, title, image}) =>
+
+interface ImageProps {
+  website?: string;
+  title: string;
+  image: string;
+}
+
+const Image = ({website, title, image}: ImageProps) =>
   <div className={'image-container'}>
     <a className={`image-link ${website && 'link'}`} {...(website && {href: website})}>
       <img src={image} alt={`${title}`}/>
     </a>
   </div>
 
-const Description = ({desc}) =>
+
+interface DescriptionProps {
+  desc: string;
+}
+
+const Description = ({desc}: DescriptionProps) =>
   <div className={'description'} dangerouslySetInnerHTML={{__html: desc}}/>
 
-const Technology = ({tech}) =>
+interface TechnologyProps {
+  tech: string
+}
+
+const Technology = ({tech}: TechnologyProps) =>
   <div className={'tech'}>
     <h4>Technologies</h4>
     <p>{tech}</p>
   </div>
 
-const Content = ({desc, tech, title, link}) =>
+
+interface ContentProps {
+  desc: string;
+  tech: string;
+  title: string;
+  link?: string;
+}
+
+const Content = ({desc, tech, title, link}: ContentProps) =>
   <div className={'content'}>
     <Title link={link} title={title}/>
     <div className={'text'}>
@@ -45,9 +75,18 @@ const Content = ({desc, tech, title, link}) =>
     </div>
   </div>
 
-const Project = ({title, desc, image, tech, website}) =>
+
+interface ProjectProps {
+  title: string;
+  desc: string;
+  image: string;
+  tech: string;
+  website?: string;
+}
+
+const Project = ({title, desc, image, tech, website}: ProjectProps) =>
   <div className={'project'}>
-    <Content title={title} desc={desc} image={image} tech={tech} website={website}/>
+    <Content title={title} desc={desc} tech={tech}/>
     <Image website={website} image={image} title={title}/>
   </div>
 

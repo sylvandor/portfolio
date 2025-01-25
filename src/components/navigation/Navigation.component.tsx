@@ -1,6 +1,6 @@
 import {Link, Outlet} from "react-router-dom";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faHouse, faCloudArrowDown} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCloudArrowDown, faHouse} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
 import resume from '../../resources/currentResume-v2.pdf'
@@ -12,20 +12,20 @@ const Header = () =>
     <div className={'header'}>
       <div className={'left navigation'}>
         <Link to={'/'} className={'icon-container'}>
-          <FontAwesomeIcon icon={faHouse}/>
+          <FontAwesomeIcon icon={faHouse} />
         </Link>
         <a href={'https://github.com/sylvandor'}>
-          <FontAwesomeIcon icon={faGithub}/>
+          <FontAwesomeIcon icon={faGithub} />
         </a>
         <a href={'https://linkedin.com/in/scottwwj'}>
-          <FontAwesomeIcon icon={faLinkedin}/>
+          <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>
       <div className={'right navigation'}>
         <Link to={'/projects'}>Projects</Link>
         {/*<Link to={'/about'}>About</Link>*/}
         <a href={resume} download={'scott_johnson_resume.pdf'}>
-          Resume <FontAwesomeIcon icon={faCloudArrowDown}/>
+          Resume <FontAwesomeIcon icon={faCloudArrowDown} />
         </a>
       </div>
     </div>
