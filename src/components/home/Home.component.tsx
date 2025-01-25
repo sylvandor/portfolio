@@ -8,7 +8,7 @@ const Home = () =>
     <h1 className={'name'}>Hi, I'm Scott</h1>
     <div className={'image-container'}>
       <Hex className={'outer'}>
-        <Hex image={profile}/>
+        <Hex image={profile} className={''}>{null}</Hex>
       </Hex>
     </div>
     <h1 className={'welcome'}>
