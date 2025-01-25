@@ -15,12 +15,10 @@ const Home = () =>
       Welcome,
     </h1>
     <h3>
-      I'm a software engineer. I decided to make this page as a portfolio for my professional work and
-      talk about myself a bit. While I've spent most of my career working on overly complex Java projects,
-      I've really found a passion for building UIs. Of late, that's manifested in React webpages.
+      I'm a passionate software engineer and technical lead with over 11 years of experience solving complex frontend challenges and delivering user-focused web applications. I specialize in React and Redux, creating intuitive interfaces that enhance usability and drive efficiency. While I’m passionate about improving frontend experiences, I bring extensive backend expertise, designing and implementing scalable systems to ensure reliability and performance.
     </h3>
     <h3>
-      Anyway, welcome to my WIP portfolio site. If you want to connect with me, please do so via LinkedIn.
+      Whether it’s streamlining enterprise workflows at Block Inc. (Square) or developing mission-critical tools for the Department of Defense, I’m committed to building technology that solves real-world problems and makes a difference for the people who use it.
     </h3>
   </div>;
 
