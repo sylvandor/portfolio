@@ -3,7 +3,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCloudArrowDown, faHouse} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
-import resume from '../../resources/currentResume-v2.pdf'
+import resume from '../../resources/currentResume-v3.pdf'
 
 import './Navigation.syles.scss'
 
