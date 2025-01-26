@@ -13,7 +13,7 @@
     font-size: 6em;
     text-align: center;
 
-    @media( max-width: 600px) {
+    @media( max-width: 600px), (max-height: 600px) {
       font-size: 4em;
     }
   }
@@ -33,12 +33,12 @@
       height: 500px;
       width: 500px;
 
-      @media(max-width: 800px) {
+      @media(max-width: 800px), (max-height:800px) {
         height: 300px;
         width: 300px;
       }
 
-      @media(max-width: 600px) {
+      @media(max-width: 600px), (max-height: 600px) {
         height: 200px;
         width: 200px;
       }
@@ -70,7 +70,7 @@
         text-align: center;
         font-size: 3em;
 
-        @media(max-width: 600px) {
+        @media(max-width: 600px), (max-height: 600px) {
           font-size: 2em;
         }
       }
