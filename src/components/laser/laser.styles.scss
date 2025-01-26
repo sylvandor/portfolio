@@ -1,0 +1,31 @@
+.masonry-grid {
+  display: flex;
+  margin-left: -64px;
+  width: auto;
+}
+
+.masonry-grid-column {
+  padding-left: 64px;
+  background-clip: padding-box;
+}
+
+.masonry-item {
+  margin-bottom: 64px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.masonry-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.masonry-item img,
+.masonry-item video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

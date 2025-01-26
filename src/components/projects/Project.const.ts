@@ -7,12 +7,10 @@ export const PROJECTS = {
   portfolio: {
   title: 'Portfolio',
     link: 'https://github.com/sylvandor/portfolio',
-    desc: "You Are Here 📍 I decided that it was about time for me to create " +
-      "my own portfolio web resume. So this is it. Currently it's still in its early stages, but every project has to " +
-      "start somewhere.",
-    tech: 'React, Netlify, Google Domain',
+    desc: "You Are Here 📍",
+    tech: 'React, Redux, Typescript, Netlify, Google Domain',
     image: portfolio,
-    website: 'http://scottwwj.com'
+    website: 'https://scottwwj.com'
   },
   crwnClothing: {
     title: 'Crwn Clothing',

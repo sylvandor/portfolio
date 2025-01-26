@@ -2,37 +2,53 @@
 
 $header-height: 56px;
 
-.header {
+.nav {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-
-  height: $header-height;
+  justify-content: center;
+  gap: index.$base-spacing;
+  padding: index.$base-spacing*5 index.$base-spacing;
 
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+
+  inset: 0 auto 0 0;
 
   background-color: index.$primary-light-color;
 
+  .divider {
+    width: 80%;
+    height: 2px;
+    background-color: index.$text-color;
+    margin: index.$base-spacing 0;
+
+    @media (max-width: 600px) {
+      margin: index.$base-spacing*0.5 0;
+    }
+  }
+
   .navigation {
     display: flex;
+    flex-direction: column;
     gap: index.$base-spacing;
     align-items: center;
 
-    & a {
+    & a, .icon-container {
       display: inline-block;
       text-decoration: none;
       color: index.$text-color;
+
+      &:hover {
+        color: index.$background-color;
+        background-color: index.$text-color;
+        box-shadow: 2px 2px 4px #444;
+      }
     }
 
-    &.left {
-      margin-left: index.$base-spacing;
+    &.top {
       gap: index.$base-spacing*2;
 
       & a {
-        padding: 0;
         font-size: 32px;
 
         @media(max-width: 600px) {
@@ -42,8 +58,9 @@ $header-height: 56px;
 
       .icon-container {
         font-size: 32px;
+        padding: index.$base-spacing;
+        border-radius: 4px;
         text-decoration: none;
-        color: index.$text-color;
 
         cursor: pointer;
 
@@ -53,9 +70,7 @@ $header-height: 56px;
       }
     }
 
-    &.right {
-      margin-right: index.$base-spacing;
-
+    &.bottom {
       & a {
         margin: 0;
         padding: index.$base-spacing*1.5;
@@ -70,12 +85,6 @@ $header-height: 56px;
           font-size: 16px;
           padding: index.$base-spacing;
         }
-
-        &:hover {
-          color: index.$background-color;
-          background-color: #4B497A;
-          box-shadow: 2px 2px 4px #444;
-        }
       }
     }
   }
@@ -84,9 +93,9 @@ $header-height: 56px;
 .main-content {
   padding: index.$base-spacing*4;
   position: fixed;
-  top: $header-height;
+  top: 0;
   bottom: 0;
-  left: 0;
+  left: 125px;
   right: 0;
 
   overflow-y: scroll;
