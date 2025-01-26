@@ -90,6 +90,7 @@ const Laser = () => {
               muted
               loop
               playsInline
+              preload={'auto'}
             />
           )}
         </div>
