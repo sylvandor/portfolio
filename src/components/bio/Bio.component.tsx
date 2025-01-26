@@ -1,7 +1,7 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 import './Bio.styles.scss'
-import {Link} from "react-router-dom";
 
 const Bio = () => (
   <div>

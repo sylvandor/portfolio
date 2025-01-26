@@ -2,11 +2,19 @@
   display: flex;
   margin-left: -64px;
   width: auto;
+
+  @media(max-width: 600px) {
+    margin-left: -32px;
+  }
 }
 
 .masonry-grid-column {
   padding-left: 64px;
   background-clip: padding-box;
+
+  @media(max-width: 600px) {
+    padding-left: 32px;
+  }
 }
 
 .masonry-item {
@@ -15,6 +23,10 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
+
+  @media(max-width: 600px) {
+    margin-bottom: 32px;
+  }
 }
 
 .masonry-item:hover {

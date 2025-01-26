@@ -12,6 +12,10 @@
     font-family: 'Yellowtail', sans-serif;
     font-size: 6em;
     text-align: center;
+
+    @media( max-width: 600px) {
+      font-size: 4em;
+    }
   }
 
   .home-content {
@@ -32,6 +36,11 @@
       @media(max-width: 800px) {
         height: 300px;
         width: 300px;
+      }
+
+      @media(max-width: 600px) {
+        height: 200px;
+        width: 200px;
       }
       display: flex;
 
@@ -60,6 +69,10 @@
       .text {
         text-align: center;
         font-size: 3em;
+
+        @media(max-width: 600px) {
+          font-size: 2em;
+        }
       }
     }
   }

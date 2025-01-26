@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import Masonry from 'react-masonry-css';
 
-import './laser.styles.scss'
+import './Laser.styles.scss'
 
 import bigfoot from '../../resources/laser/bigfoot-stanley.mp4'
 import coaster from '../../resources/laser/cosmere_coaster.jpeg'
@@ -60,7 +60,6 @@ const Laser = () => {
   const breakpointColumns = {
     default: 3,
     700: 2,
-    500: 1,
   };
 
   return (
