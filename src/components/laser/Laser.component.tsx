@@ -22,15 +22,25 @@ import sunflowerThumbnail from '../../resources/laser/sunflower-stanley.jpeg'
 import windrunner from '../../resources/laser/windrunner-brumate.mp4'
 import windrunnerThumbnail from '../../resources/laser/windrunner-brumate.jpeg'
 
-interface MediaItem {
+interface MediaBase {
   id: number;
   type: 'image' | 'video';
   src: string;
-  alt?: string;
-  thumbnail?: string;
+  alt: string;
 }
 
-const mediaItems: MediaItem[] = [
+interface Image extends MediaBase {
+  type: 'image';
+}
+
+interface Video extends MediaBase {
+  type: 'video';
+  thumbnail: string;
+}
+
+type Media = Image | Video;
+
+const mediaItems: Media[] = [
   {id: 1, type: 'video', src: bigfoot, thumbnail: bigfootThumbnail, alt: 'Bigfoot thumbnail'},
   {id: 2, type: 'image', src: coaster, alt: 'Cosmere coaster'},
   {id: 3, type: 'video', src: crafty, thumbnail: craftyThumbnail, alt: 'Crafty thumbnail'},

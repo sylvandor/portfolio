@@ -5,6 +5,14 @@ $image-sides: 200px;
 .projects-header {
   text-align: center;
   margin-bottom: index.$base-spacing*5;
+
+  p {
+    font-size: 1.5em;
+
+    @media(max-width: 600px), (max-height: 600px) {
+      font-size: 1em;
+    }
+  }
 }
 
 .projects {
