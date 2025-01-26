@@ -10,6 +10,11 @@ $header-height: 56px;
   gap: index.$base-spacing;
   padding: index.$base-spacing*5 index.$base-spacing;
 
+  @media (max-width: 600px), (max-height: 600px) {
+    padding: index.$base-spacing*2 index.$base-spacing*0.5;
+    gap: index.$base-spacing*0.5;
+  }
+
   position: fixed;
 
   inset: 0 auto 0 0;
@@ -22,7 +27,7 @@ $header-height: 56px;
     background-color: index.$text-color;
     margin: index.$base-spacing 0;
 
-    @media (max-width: 600px) {
+    @media (max-width: 600px), (max-height: 600px) {
       margin: index.$base-spacing*0.5 0;
     }
   }
@@ -32,6 +37,10 @@ $header-height: 56px;
     flex-direction: column;
     gap: index.$base-spacing;
     align-items: center;
+
+    @media (max-width: 600px), (max-height: 600px) {
+      gap: index.$base-spacing*0.5;
+    }
 
     & a, .icon-container {
       display: inline-block;
@@ -48,11 +57,16 @@ $header-height: 56px;
     &.top {
       gap: index.$base-spacing*2;
 
+      @media (max-width: 600px), (max-height: 600px) {
+        gap: index.$base-spacing;
+      }
+
       & a {
         font-size: 32px;
 
-        @media(max-width: 600px) {
+        @media (max-width: 600px), (max-height: 600px) {
           font-size: 20px;
+          gap: index.$base-spacing*0.5;
         }
       }
 
@@ -64,7 +78,7 @@ $header-height: 56px;
 
         cursor: pointer;
 
-        @media(max-width: 600px) {
+        @media(max-width: 600px), (max-height: 600px) {
           font-size: 20px;
         }
       }
@@ -81,7 +95,7 @@ $header-height: 56px;
 
         cursor: pointer;
 
-        @media(max-width: 600px) {
+        @media(max-width: 600px), (max-height: 600px) {
           font-size: 16px;
           padding: index.$base-spacing;
         }
@@ -100,7 +114,7 @@ $header-height: 56px;
 
   overflow-y: scroll;
 
-  @media(max-width: 600px) {
-    padding: index.$base-spacing*2;
+  @media(max-width: 600px), (max-height: 600px) {
+    padding: index.$base-spacing;
   }
 }
