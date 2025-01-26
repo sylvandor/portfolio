@@ -8,8 +8,8 @@ import './Projects.styles.scss'
 const Header = () =>
   <div className={'projects-header'}>
     <h1>Personal Projects</h1>
-    <h3>Here are a few things I've worked on in my own time. My personal work is most comprised of tutorials through
-      online courses.</h3>
+    <p>Here are a few things I've worked on in my own time. My personal work is most comprised of tutorials through
+      online courses.</p>
   </div>
 
 
