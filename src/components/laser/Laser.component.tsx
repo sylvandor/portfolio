@@ -5,7 +5,7 @@ import './Laser.styles.scss'
 
 import bigfoot from '../../resources/laser/bigfoot-stanley.mp4'
 import bigfootThumbnail from '../../resources/laser/bigfoot-stanley.jpeg'
-import coaster from '../../resources/laser/cosmere_coaster.jpeg'
+import coaster from '../../resources/laser/cosmere_coaster-v2.jpeg'
 import crafty from '../../resources/laser/crafty-stanley.mp4'
 import craftyThumbnail from '../../resources/laser/crafty-stanley.jpeg'
 import horneater from '../../resources/laser/horneater_white.jpeg'
