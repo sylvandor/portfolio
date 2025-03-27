@@ -1,57 +1,31 @@
 import React, {useRef} from 'react';
 import Masonry from 'react-masonry-css';
 
+import {BASE_CLOUDFRONT_URL} from "../const";
+
 import './Laser.styles.scss'
 
-import bigfoot from '../../resources/laser/bigfoot-stanley.mp4'
-import bigfootThumbnail from '../../resources/laser/bigfoot-stanley.jpeg'
-import coaster from '../../resources/laser/cosmere_coaster-v2.jpeg'
-import crafty from '../../resources/laser/crafty-stanley.mp4'
-import craftyThumbnail from '../../resources/laser/crafty-stanley.jpeg'
-import horneater from '../../resources/laser/horneater_white.jpeg'
-import labBrumate from '../../resources/laser/lab-brumate.mp4'
-import labBrumateThumbnail from '../../resources/laser/lab-brumate.jpeg'
-import nana from '../../resources/laser/nana-stanley.mp4'
-import nanaThumbnail from '../../resources/laser/nana-stanley.jpeg'
-import pandaStanley from '../../resources/laser/panda-stanley.mp4'
-import pandaStanleyThumbnail from '../../resources/laser/panda-stanley.jpeg'
-import scoopy from '../../resources/laser/scoopy.jpeg'
-import spiceDrawer from '../../resources/laser/spice_drawer.png'
-import sunflower from '../../resources/laser/sunflower-stanley.mp4'
-import sunflowerThumbnail from '../../resources/laser/sunflower-stanley.jpeg'
-import windrunner from '../../resources/laser/windrunner-brumate.mp4'
-import windrunnerThumbnail from '../../resources/laser/windrunner-brumate.jpeg'
 
-interface MediaBase {
+interface Media {
   id: number;
   type: 'image' | 'video';
-  src: string;
+  filename: string;
   alt: string;
 }
 
-interface Image extends MediaBase {
-  type: 'image';
-}
-
-interface Video extends MediaBase {
-  type: 'video';
-  thumbnail: string;
-}
-
-type Media = Image | Video;
 
 const mediaItems: Media[] = [
-  {id: 1, type: 'video', src: bigfoot, thumbnail: bigfootThumbnail, alt: 'Bigfoot thumbnail'},
-  {id: 2, type: 'image', src: coaster, alt: 'Cosmere coaster'},
-  {id: 3, type: 'video', src: crafty, thumbnail: craftyThumbnail, alt: 'Crafty thumbnail'},
-  {id: 4, type: 'image', src: horneater, alt: 'Horneater white'},
-  {id: 5, type: 'video', src: labBrumate, thumbnail: labBrumateThumbnail, alt: 'Lab brumate thumbnail'},
-  {id: 6, type: 'video', src: nana, thumbnail: nanaThumbnail, alt: 'Nana thumbnail'},
-  {id: 7, type: 'video', src: pandaStanley, thumbnail: pandaStanleyThumbnail, alt: 'Panda stanley thumbnail'},
-  {id: 8, type: 'image', src: scoopy, alt: 'Scoopy'},
-  {id: 9, type: 'image', src: spiceDrawer, alt: 'Spice drawer'},
-  {id: 10, type: 'video', src: sunflower, thumbnail: sunflowerThumbnail, alt: 'Sunflower thumbnail'},
-  {id: 11, type: 'video', src: windrunner, thumbnail: windrunnerThumbnail, alt: 'Windrunner thumbnail'},
+  {id: 1, type: 'video', filename: 'bigfoot-stanley', alt: 'Bigfoot thumbnail'},
+  {id: 2, type: 'image', filename: 'cosmere_coaster-v2', alt: 'Cosmere coaster'},
+  {id: 3, type: 'video', filename: 'crafty-stanley', alt: 'Crafty thumbnail'},
+  {id: 4, type: 'image', filename: 'horneater_white', alt: 'Horneater white'},
+  {id: 5, type: 'video', filename: 'lab-brumate', alt: 'Lab brumate thumbnail'},
+  {id: 6, type: 'video', filename: 'nana-stanley', alt: 'Nana thumbnail'},
+  {id: 7, type: 'video', filename: 'panda-stanley', alt: 'Panda stanley thumbnail'},
+  {id: 8, type: 'image', filename: 'scoopy', alt: 'Scoopy'},
+  {id: 9, type: 'image', filename: 'spice_drawer', alt: 'Spice drawer'},
+  {id: 10, type: 'video', filename: 'sunflower-stanley', alt: 'Sunflower thumbnail'},
+  {id: 11, type: 'video', filename: 'windrunner-brumate', alt: 'Windrunner thumbnail'},
 ];
 
 const isPlaying = (video: HTMLVideoElement) => {
@@ -80,6 +54,9 @@ const Laser = () => {
     700: 2,
   };
 
+  const getImageUrl = (filename: string) =>  `${BASE_CLOUDFRONT_URL}laser/${filename}.jpeg`
+  const getVideoUrl = (filename: string) => `${BASE_CLOUDFRONT_URL}laser/${filename}.mp4`
+
   return (
     <Masonry
       breakpointCols={breakpointColumns}
@@ -94,7 +71,7 @@ const Laser = () => {
           onMouseLeave={() => handleMouseLeave(item.id)}
         >
           <img
-            src={item.type === 'image' ? item.src : item.thumbnail}
+            src={getImageUrl(item.filename)}
             alt={item.alt}
             className={`${item.type === 'video' && 'thumbnail'}`}
           />
@@ -103,7 +80,8 @@ const Laser = () => {
               ref={(el) => {
                 if (el) videoRefs.current.set(item.id, el);
               }}
-              src={item.src}
+              preload="auto"
+              src={getVideoUrl(item.filename)}
               muted
               loop
               playsInline

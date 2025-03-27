@@ -1,8 +1,3 @@
-import crwnClothing from '../../resources/crwnClothing.png';
-import css2022 from '../../resources/css_2022.png';
-import gladiator from '../../resources/gladiator.png';
-import portfolio from '../../resources/portfolio.png';
-
 const REACT_COURSE_LINK = "https://www.udemy.com/course/complete-react-developer-zero-to-mastery/";
 const CSS_COURSE_LINK = "https://www.udemy.com/course/css-the-complete-guide-incl-flexbox-grid-sass/";
 const GLADIATOR_LINK = "https://boardgamegeek.com/boardgame/1693/gladiator";
@@ -25,7 +20,7 @@ export const PROJECTS: Record<string, Project> = {
     link: 'https://github.com/sylvandor/portfolio',
     desc: "You Are Here 📍",
     tech: 'React, Redux, Typescript, Netlify, Google Domain',
-    image: portfolio,
+    image: 'portfolio.png',
     website: 'https://scottwwj.com'
   },
   crwnClothing: {
@@ -40,7 +35,7 @@ export const PROJECTS: Record<string, Project> = {
       "I actually ended up learning a good amount more than expected, and it led to me majorly refactoring a work project " +
       "for performance, cutting load times nearly in half.",
     tech: 'React, Redux, Firebase Auth, Firestore, Styled Components, Redux Thunk, Redux Persist, Redux Saga, Netlify, Stripe, Typescript',
-    image: crwnClothing,
+    image: 'crwnClothing.png',
     website: 'https://cerulean-macaron-d14353.netlify.app/'
   },
   gladiator: {
@@ -56,7 +51,7 @@ export const PROJECTS: Record<string, Project> = {
       "be able to play this game with him online in the future. Until then, we'll just have to stick to in-person visits. " +
       "This had the super interesting problem to try to solve of dealing with a hex gaming board. Definitely not as straightforward as a grid.",
     tech: 'HTML5 canvas, Math',
-    image: gladiator,
+    image: 'gladiator.png',
     website: 'https://6292c4aaf71d0a5df5eb4416--timely-fox-5807fe.netlify.app'
   },
   css2022: {
@@ -70,7 +65,7 @@ export const PROJECTS: Record<string, Project> = {
       " My team at Block decided that we wanted to more completely learn the ins and outs of CSS, so we started this together " +
       "and discuss weekly.",
     tech: 'CSS3',
-    image: css2022,
+    image: 'css_2022.png',
     website: 'https://6292ba6f307cc55a9e2036f2--bucolic-figolla-3048a5.netlify.app'
   }
 };

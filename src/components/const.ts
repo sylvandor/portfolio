@@ -1,0 +1,1 @@
+export const BASE_CLOUDFRONT_URL = 'https://d31fqmcnc2i2bb.cloudfront.net/resources/'
