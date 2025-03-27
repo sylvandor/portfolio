@@ -3,9 +3,12 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCloudArrowDown, faHouse} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
-import resume from '../../resources/scott_johnson_resume-v4.pdf'
+import {BASE_CLOUDFRONT_URL} from "../const";
 
 import './Navigation.syles.scss'
+
+const RESUME_URL = `${BASE_CLOUDFRONT_URL}scott_johnson_resume-v4.pdf`
+
 
 const Header = () =>
   <>
@@ -27,7 +30,7 @@ const Header = () =>
         <Link to={'/bio'}>Bio</Link>
         <Link to={'/projects'}>Projects</Link>
         <Link to={'/laser'}>Laser</Link>
-        <a href={resume} download={'scott_johnson_resume.pdf'}>
+        <a href={RESUME_URL} download={'scott_johnson_resume.pdf'}>
           Resume <FontAwesomeIcon icon={faCloudArrowDown}/>
         </a>
       </div>

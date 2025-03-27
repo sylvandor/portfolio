@@ -2,6 +2,7 @@ import {faCode} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import {PROJECTS} from "./Project.const";
+import {BASE_CLOUDFRONT_URL} from "../const";
 
 import './Projects.styles.scss'
 
@@ -36,7 +37,7 @@ interface ImageProps {
 const Image = ({website, title, image}: ImageProps) =>
   <div className={'image-container'}>
     <a className={`image-link ${website && 'link'}`} {...(website && {href: website})}>
-      <img src={image} alt={`${title}`}/>
+      <img src={`${BASE_CLOUDFRONT_URL}${image}`} alt={`${title}`}/>
     </a>
   </div>
 
